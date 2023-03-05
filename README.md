@@ -15,3 +15,30 @@ print('my_pairidnum=',my_pairidnum)
 print('my_corenessnum=',my_corenessnum)
 print('CPscore=',CPscore(dt, my_pairidnum, my_corenessnum, gamma=gamma))
 ```
+```
+def myread(netpath):
+    with open(netpath) as f:
+        read_data=f.read()
+        fo=read_data.split()
+        fo = [ int(x) for x in fo ]
+        length=len(fo) 
+       
+        returnMat = [[0 for x in range(max(fo)+1)] for y in range(max(fo)+1)] 
+        
+        temp=0
+        while(temp<length):
+            returnMat[fo[temp]][fo[temp+1]]=1
+            returnMat[fo[temp+1]][fo[temp]]=1 
+            temp+=2     
+            
+        #print(returnMat)
+    f.closed
+    return returnMat,max(fo)  
+
+netpath='path of your network'
+(dt0,graphsize)=myread(netpath)
+dt0=np.array(dt0)
+
+dt = dt0[:graphsize,:graphsize]
+dt.shape
+```

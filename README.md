@@ -1,5 +1,5 @@
 # CP-score
-This work please cite here:
+If you use this piece of code, you can cite the following publication,
 >Shen, X., Han, Y., Li, W., Wong, K. C., & Peng, C. (2021). Finding core–periphery structures in large networks. Physica A: Statistical Mechanics and its Applications, 581, 126224.
 
 **Test**
